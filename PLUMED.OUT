@@ -1,0 +1,206 @@
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.4.2 (git: Unknown) compiled on Aug  6 2018 at 10:42:36
+PLUMED: Please cite this paper when using PLUMED [1]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /Users/237454k/Programs/plumed-2.4.2/
+PLUMED: For installed feature, see /Users/237454k/Programs/plumed-2.4.2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 100261
+PLUMED: File suffix: 
+PLUMED: FILE: plumed.mtd.inp
+PLUMED: Action RESTART
+PLUMED:   with label @0
+PLUMED:   MD code didn't require restart
+PLUMED:   Switching on restart
+PLUMED:   Restarting simulation: files will be appended
+PLUMED: Action UNITS
+PLUMED:   with label @1
+PLUMED:   length: A
+PLUMED:   energy: eV
+PLUMED:   time: ps
+PLUMED:   charge: e
+PLUMED:   mass: amu
+PLUMED:   using physical units
+PLUMED:   inside PLUMED, Boltzmann constant is 0.000086
+PLUMED: Action DISTANCE
+PLUMED:   with label d1
+PLUMED:   between atoms 9 52
+PLUMED:   using periodic boundary conditions
+PLUMED: Action DISTANCE
+PLUMED:   with label d2
+PLUMED:   between atoms 24 67
+PLUMED:   using periodic boundary conditions
+PLUMED: Action DISTANCE
+PLUMED:   with label v1
+PLUMED:   between atoms 8 16
+PLUMED:   using periodic boundary conditions
+PLUMED:   added component to this action:  v1.x 
+PLUMED:   added component to this action:  v1.y 
+PLUMED:   added component to this action:  v1.z 
+PLUMED:   WARNING: components will not have the proper periodicity - see manual
+PLUMED: Action DISTANCE
+PLUMED:   with label v2
+PLUMED:   between atoms 21 16
+PLUMED:   using periodic boundary conditions
+PLUMED:   added component to this action:  v2.x 
+PLUMED:   added component to this action:  v2.y 
+PLUMED:   added component to this action:  v2.z 
+PLUMED:   WARNING: components will not have the proper periodicity - see manual
+PLUMED: Action DISTANCE
+PLUMED:   with label v3
+PLUMED:   between atoms 51 59
+PLUMED:   using periodic boundary conditions
+PLUMED:   added component to this action:  v3.x 
+PLUMED:   added component to this action:  v3.y 
+PLUMED:   added component to this action:  v3.z 
+PLUMED:   WARNING: components will not have the proper periodicity - see manual
+PLUMED: Action DISTANCE
+PLUMED:   with label v4
+PLUMED:   between atoms 64 59
+PLUMED:   using periodic boundary conditions
+PLUMED:   added component to this action:  v4.x 
+PLUMED:   added component to this action:  v4.y 
+PLUMED:   added component to this action:  v4.z 
+PLUMED:   WARNING: components will not have the proper periodicity - see manual
+PLUMED: Action MATHEVAL
+PLUMED:   with label fx
+PLUMED:   with arguments v1.y v1.z v2.y v2.z
+PLUMED:   with function : ay*bz-az*by
+PLUMED:   with variables : ay az by bz
+PLUMED:   WARNING: you are using lepton as a replacement for libmatheval
+PLUMED:   function as parsed by lepton: ((ay)*(bz))-((az)*(by))
+PLUMED:   derivatives as computed by lepton:
+PLUMED:     bz
+PLUMED:     -(by)
+PLUMED:     -(az)
+PLUMED:     ay
+PLUMED: Action MATHEVAL
+PLUMED:   with label fy
+PLUMED:   with arguments v1.x v1.z v2.x v2.z
+PLUMED:   with function : az*bx-ax*bz
+PLUMED:   with variables : ax az bx bz
+PLUMED:   WARNING: you are using lepton as a replacement for libmatheval
+PLUMED:   function as parsed by lepton: ((az)*(bx))-((ax)*(bz))
+PLUMED:   derivatives as computed by lepton:
+PLUMED:     -(bz)
+PLUMED:     bx
+PLUMED:     az
+PLUMED:     -(ax)
+PLUMED: Action MATHEVAL
+PLUMED:   with label fz
+PLUMED:   with arguments v1.x v1.y v2.x v2.y
+PLUMED:   with function : ax*by-ay*bx
+PLUMED:   with variables : ax ay bx by
+PLUMED:   WARNING: you are using lepton as a replacement for libmatheval
+PLUMED:   function as parsed by lepton: ((ax)*(by))-((ay)*(bx))
+PLUMED:   derivatives as computed by lepton:
+PLUMED:     by
+PLUMED:     -(bx)
+PLUMED:     -(ay)
+PLUMED:     ax
+PLUMED: Action MATHEVAL
+PLUMED:   with label gx
+PLUMED:   with arguments v3.y v3.z v4.y v4.z
+PLUMED:   with function : ay*bz-az*by
+PLUMED:   with variables : ay az by bz
+PLUMED:   WARNING: you are using lepton as a replacement for libmatheval
+PLUMED:   function as parsed by lepton: ((ay)*(bz))-((az)*(by))
+PLUMED:   derivatives as computed by lepton:
+PLUMED:     bz
+PLUMED:     -(by)
+PLUMED:     -(az)
+PLUMED:     ay
+PLUMED: Action MATHEVAL
+PLUMED:   with label gy
+PLUMED:   with arguments v3.x v3.z v4.x v4.z
+PLUMED:   with function : az*bx-ax*bz
+PLUMED:   with variables : ax az bx bz
+PLUMED:   WARNING: you are using lepton as a replacement for libmatheval
+PLUMED:   function as parsed by lepton: ((az)*(bx))-((ax)*(bz))
+PLUMED:   derivatives as computed by lepton:
+PLUMED:     -(bz)
+PLUMED:     bx
+PLUMED:     az
+PLUMED:     -(ax)
+PLUMED: Action MATHEVAL
+PLUMED:   with label gz
+PLUMED:   with arguments v3.x v3.y v4.x v4.y
+PLUMED:   with function : ax*by-ay*bx
+PLUMED:   with variables : ax ay bx by
+PLUMED:   WARNING: you are using lepton as a replacement for libmatheval
+PLUMED:   function as parsed by lepton: ((ax)*(by))-((ay)*(bx))
+PLUMED:   derivatives as computed by lepton:
+PLUMED:     by
+PLUMED:     -(bx)
+PLUMED:     -(ay)
+PLUMED:     ax
+PLUMED: Action MATHEVAL
+PLUMED:   with label theta
+PLUMED:   with arguments fx fy fz gx gy gz
+PLUMED:   with function : (ax*bx+ay*by+az*bz)/sqrt((ax*ax+ay*ay+az*az)*(bx*bx+by*by+bz*bz))
+PLUMED:   with variables : ax ay az bx by bz
+PLUMED:   WARNING: you are using lepton as a replacement for libmatheval
+PLUMED:   function as parsed by lepton: ((((ax)*(bx))+((ay)*(by)))+((az)*(bz)))/(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))
+PLUMED:   derivatives as computed by lepton:
+PLUMED:     (((sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))*(bx))-(((((ax)*(bx))+((ay)*(by)))+((az)*(bz)))*((0.5*(recip(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))))*((((square(bx))+(square(by)))+(square(bz)))*((ax)+(ax))))))/(square(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz))))))
+PLUMED:     (((sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))*(by))-(((((ax)*(bx))+((ay)*(by)))+((az)*(bz)))*((0.5*(recip(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))))*((((square(bx))+(square(by)))+(square(bz)))*((ay)+(ay))))))/(square(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz))))))
+PLUMED:     (((sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))*(bz))-(((((ax)*(bx))+((ay)*(by)))+((az)*(bz)))*((0.5*(recip(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))))*((((square(bx))+(square(by)))+(square(bz)))*((az)+(az))))))/(square(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz))))))
+PLUMED:     (((sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))*(ax))-(((((ax)*(bx))+((ay)*(by)))+((az)*(bz)))*((0.5*(recip(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))))*((((square(ax))+(square(ay)))+(square(az)))*((bx)+(bx))))))/(square(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz))))))
+PLUMED:     (((sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))*(ay))-(((((ax)*(bx))+((ay)*(by)))+((az)*(bz)))*((0.5*(recip(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))))*((((square(ax))+(square(ay)))+(square(az)))*((by)+(by))))))/(square(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz))))))
+PLUMED:     (((sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))*(az))-(((((ax)*(bx))+((ay)*(by)))+((az)*(bz)))*((0.5*(recip(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz)))))))*((((square(ax))+(square(ay)))+(square(az)))*((bz)+(bz))))))/(square(sqrt((((square(ax))+(square(ay)))+(square(az)))*(((square(bx))+(square(by)))+(square(bz))))))
+PLUMED: Action UPPER_WALLS
+PLUMED:   with label uwall1
+PLUMED:   with arguments d1
+PLUMED:   added component to this action:  uwall1.bias 
+PLUMED:   at 22.000000
+PLUMED:   with an offset 0.000000
+PLUMED:   with force constant 1000.000000
+PLUMED:   and exponent 2.000000
+PLUMED:   rescaled 1.000000
+PLUMED:   added component to this action:  uwall1.force2 
+PLUMED: Action UPPER_WALLS
+PLUMED:   with label uwall2
+PLUMED:   with arguments d2
+PLUMED:   added component to this action:  uwall2.bias 
+PLUMED:   at 22.000000
+PLUMED:   with an offset 0.000000
+PLUMED:   with force constant 1000.000000
+PLUMED:   and exponent 2.000000
+PLUMED:   rescaled 1.000000
+PLUMED:   added component to this action:  uwall2.force2 
+PLUMED: Action METAD
+PLUMED:   with label mtd
+PLUMED:   with arguments d1 d2 theta
+PLUMED:   added component to this action:  mtd.bias 
+PLUMED:   Gaussian width  0.200000 0.200000 0.050000  Gaussian height 0.026000
+PLUMED:   Gaussian deposition pace 1000
+PLUMED:   Gaussian file HILLS
+PLUMED:   Well-Tempered Bias Factor 5.000000
+PLUMED:   Hills relaxation time (tau) 3977.231504
+PLUMED:   KbT 0.025852
+PLUMED:   added component to this action:  mtd.work 
+PLUMED:   Restarting from HILLS:      0 Gaussians read
+PLUMED:   Bibliography [2][3]
+PLUMED: Action PRINT
+PLUMED:   with label @18
+PLUMED:   with stride 1
+PLUMED:   with arguments d1 d2 theta uwall1.bias uwall2.bias
+PLUMED:   on file COLVAR
+PLUMED:   with format  %f
+PLUMED: Action FLUSH
+PLUMED:   with label @19
+PLUMED:   with stride 1000
+PLUMED: END FILE: plumed.mtd.inp
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [2] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [3] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup

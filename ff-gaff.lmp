@@ -1,0 +1,329 @@
+##############################################################################################
+#### Atoms types - mass - charge 
+##############################################################################################
+#@ 21 atom types
+
+variable Li equal 1
+variable Na equal 2
+variable K equal 3
+variable Rb equal 4
+variable Cs equal 5
+variable F equal 6
+variable Cl equal 7
+variable Br equal 8
+variable I equal 9
+variable C_cd equal 10
+variable C_cc equal 11
+variable H_ha equal 12
+variable N_nh equal 13
+variable H_hn equal 14
+variable N_nc equal 15
+variable C_ca equal 16
+variable N_na equal 17
+variable C_c3 equal 18
+variable H_hc equal 19
+variable O2 equal 20
+variable H2 equal 21
+
+##############################################################################################
+#### Atom masses
+##############################################################################################
+
+mass ${Li}    6.940
+mass ${Na}   22.990
+mass ${K}   39.100
+mass ${Rb}   85.470
+mass ${Cs}  132.910
+mass ${F}   19.000
+mass ${Cl}   35.450
+mass ${Br}   79.900
+mass ${I}  126.900
+mass ${C_cd}   12.010
+mass ${C_cc}   12.010
+mass ${H_ha}    1.008
+mass ${N_nh}   14.010
+mass ${H_hn}    1.008
+mass ${N_nc}   14.010
+mass ${C_ca}   12.010
+mass ${N_na}   14.010
+mass ${C_c3}   12.010
+mass ${H_hc}    1.008
+mass ${O2}   16.000
+mass ${H2}    1.008
+
+##############################################################################################
+#### Atom charges not set in lammps input
+##############################################################################################
+
+set type ${O2}  charge    -0.820000
+set type ${H2}  charge     0.410000
+
+##############################################################################################
+#### Covalent bond parameters
+##############################################################################################
+#@ 18 bond types
+
+bond_style harmonic
+#@ C_cc - C_cd
+bond_coeff    1     21.85565   1.3710
+#@ C_cd - C_cd
+bond_coeff    2     18.13932   1.4290
+#@ C_cd - N_na
+bond_coeff    3     19.02829   1.3710
+#@ C_cc - C_cc
+bond_coeff    4     18.13932   1.4290
+#@ C_cc - N_nh
+bond_coeff    5     19.47061   1.3640
+#@ C_cd - N_nc
+bond_coeff    6     21.44802   1.3350
+#@ C_ca - N_nc
+bond_coeff    7     21.37430   1.3360
+#@ C_ca - C_ca
+bond_coeff    8     20.74552   1.3870
+#@ C_ca - N_nh
+bond_coeff    9     19.47061   1.3640
+#@ C_ca - N_na
+bond_coeff   10     20.39427   1.3500
+#@ C_cc - H_ha
+bond_coeff   11     15.05611   1.0850
+#@ H_hn - N_nh
+bond_coeff   12     17.39779   1.0140
+#@ C_cd - H_ha
+bond_coeff   13     15.05611   1.0850
+#@ C_ca - H_ha
+bond_coeff   14     14.93036   1.0870
+#@ C_c3 - C_cc
+bond_coeff   15     14.62681   1.4990
+#@ C_c3 - C_ca
+bond_coeff   16     14.02838   1.5130
+#@ C_c3 - H_hc
+bond_coeff   17     14.62681   1.0920
+#@ H2 - O2
+bond_coeff   18     22.96491   1.0120
+
+##############################################################################################
+#### Covalent angle parameters
+##############################################################################################
+#@ 30 angle types
+
+angle_style harmonic
+#@ C_cc - C_cc - C_cd
+angle_coeff     1      2.95572 114.1900
+#@ C_cd - C_cd - C_cd
+angle_coeff     2      2.94357 110.7000
+#@ C_cd - C_cd - N_nc
+angle_coeff     3      3.08538 112.5600
+#@ C_ca - N_na - C_cd
+angle_coeff     4      2.96873 113.1500
+#@ C_cc - C_cd - C_cd
+angle_coeff     5      2.95572 114.1900
+#@ C_cc - C_cd - N_na
+angle_coeff     6      3.16170 109.4200
+#@ C_cc - C_cc - N_nh
+angle_coeff     7      2.96656 119.5101
+#@ C_cc - C_cc - C_cc
+angle_coeff     8      2.94357 110.7000
+#@ C_ca - N_nc - C_cd
+angle_coeff     9      3.14088 104.9400
+#@ C_cd - C_cd - N_na
+angle_coeff    10      3.13134 106.8000
+#@ C_ca - C_ca - N_nc
+angle_coeff    11      3.04158 119.7201
+#@ C_ca - C_ca - C_ca
+angle_coeff    12      2.91322 119.9701
+#@ C_ca - C_ca - N_na
+angle_coeff    13      3.04461 118.3401
+#@ C_ca - C_ca - N_nh
+angle_coeff    14      3.00689 120.1301
+#@ C_ca - N_na - C_ca
+angle_coeff    15      2.90455 120.0901
+#@ C_cd - C_cc - H_ha
+angle_coeff    16      2.09667 122.8901
+#@ C_cc - C_cc - H_ha
+angle_coeff    17      2.04420 120.8601
+#@ C_cc - N_nh - H_hn
+angle_coeff    18      2.11878 117.1601
+#@ H_hn - N_nh - H_hn
+angle_coeff    19      1.73674 114.8500
+#@ C_cc - C_cd - H_ha
+angle_coeff    20      2.09667 122.8901
+#@ C_cd - C_cd - H_ha
+angle_coeff    21      2.04420 120.8601
+#@ C_ca - C_ca - H_ha
+angle_coeff    22      2.10144 120.0101
+#@ C_ca - N_nh - H_hn
+angle_coeff    23      2.12832 116.1300
+#@ C_c3 - C_cc - C_cd
+angle_coeff    24      2.81045 119.4501
+#@ C_c3 - C_cc - C_cc
+angle_coeff    25      2.80394 115.9700
+#@ C_c3 - C_ca - C_ca
+angle_coeff    26      2.76838 120.6301
+#@ H_hc - C_c3 - H_hc
+angle_coeff    27      1.70986 108.3500
+#@ C_cc - C_c3 - H_hc
+angle_coeff    28      2.04680 110.8600
+#@ C_ca - C_c3 - H_hc
+angle_coeff    29      2.03639 110.1500
+#@ H2 - O2 - H2
+angle_coeff    30      1.64568 113.2400
+
+##############################################################################################
+#### Covalent dihedrals parameters
+##############################################################################################
+#@  44   dihedral types
+
+dihedral_style charmm
+#@ C_cd - C_cc - C_cc -N_nh
+dihedral_coeff    1   0.17346 2 180  0.0
+#@ C_cc - C_cc - C_cc -C_cd
+dihedral_coeff    2   0.17346 2 180  0.0
+#@ C_cc - C_cd - C_cd -C_cd
+dihedral_coeff    3   0.17346 2 180  0.0
+#@ C_ca - N_nc - C_cd -C_cd
+dihedral_coeff    4   0.20598 2 180  0.0
+#@ C_ca - C_ca - N_na -C_cd
+dihedral_coeff    5   0.01301 2 180  0.0
+#@ C_cc - C_cd - C_cd -N_nc
+dihedral_coeff    6   0.17346 2 180  0.0
+#@ C_ca - N_na - C_cd -C_cc
+dihedral_coeff    7   0.07372 2 180  0.0
+#@ C_cc - C_cc - C_cd -C_cd
+dihedral_coeff    8   0.17346 2 180  0.0
+#@ C_cc - C_cc - C_cd -N_na
+dihedral_coeff    9   0.17346 2 180  0.0
+#@ C_cd - C_cd - C_cd -N_na
+dihedral_coeff   10   0.17346 2 180  0.0
+#@ C_ca - C_ca - N_nc -C_cd
+dihedral_coeff   11   0.20815 2 180  0.0
+#@ C_ca - N_na - C_cd -C_cd
+dihedral_coeff   12   0.07372 2 180  0.0
+#@ N_na - C_cd - C_cd -N_nc
+dihedral_coeff   13   0.17346 2 180  0.0
+#@ C_ca - C_ca - C_ca -N_nc
+dihedral_coeff   14   0.15720 2 180  0.0
+#@ N_na - C_ca - C_ca -N_nc
+dihedral_coeff   15   0.15720 2 180  0.0
+#@ C_ca - C_ca - C_ca -C_ca
+dihedral_coeff   16   0.15720 2 180  0.0
+#@ C_ca - N_na - C_ca -C_ca
+dihedral_coeff   17   0.01301 2 180  0.0
+#@ C_ca - C_ca - C_ca -N_na
+dihedral_coeff   18   0.15720 2 180  0.0
+#@ C_ca - C_ca - C_ca -N_nh
+dihedral_coeff   19   0.15720 2 180  0.0
+#@ C_cd - C_cd - C_cd -H_ha
+dihedral_coeff   20   0.17346 2 180  0.0
+#@ C_cc - C_cc - N_nh -H_hn
+dihedral_coeff   21   0.04553 2 180  0.0
+#@ C_cc - C_cc - C_cc -H_ha
+dihedral_coeff   22   0.17346 2 180  0.0
+#@ C_cd - C_cd - C_cc -H_ha
+dihedral_coeff   23   0.17346 2 180  0.0
+#@ H_ha - C_cc - C_cd -N_na
+dihedral_coeff   24   0.17346 2 180  0.0
+#@ H_ha - C_cc - C_cc -N_nh
+dihedral_coeff   25   0.17346 2 180  0.0
+#@ C_cc - C_cc - C_cd -H_ha
+dihedral_coeff   26   0.17346 2 180  0.0
+#@ H_ha - C_cd - C_cc -H_ha
+dihedral_coeff   27   0.17346 2 180  0.0
+#@ H_ha - C_cd - C_cd -N_nc
+dihedral_coeff   28   0.17346 2 180  0.0
+#@ H_ha - C_ca - C_ca -N_nc
+dihedral_coeff   29   0.15720 2 180  0.0
+#@ C_ca - C_ca - C_ca -H_ha
+dihedral_coeff   30   0.15720 2 180  0.0
+#@ H_ha - C_ca - C_ca -H_ha
+dihedral_coeff   31   0.15720 2 180  0.0
+#@ C_ca - C_ca - N_nh -H_hn
+dihedral_coeff   32   0.04553 2 180  0.0
+#@ H_ha - C_ca - C_ca -N_nh
+dihedral_coeff   33   0.15720 2 180  0.0
+#@ H_ha - C_ca - C_ca -N_na
+dihedral_coeff   34   0.15720 2 180  0.0
+#@ C_c3 - C_cc - C_cd -C_cd
+dihedral_coeff   35   0.17346 2 180  0.0
+#@ C_c3 - C_cc - C_cc -N_nh
+dihedral_coeff   36   0.17346 2 180  0.0
+#@ C_c3 - C_cc - C_cc -C_cc
+dihedral_coeff   37   0.17346 2 180  0.0
+#@ C_c3 - C_ca - C_ca -C_ca
+dihedral_coeff   38   0.15720 2 180  0.0
+#@ C_c3 - C_ca - C_ca -N_nh
+dihedral_coeff   39   0.15720 2 180  0.0
+#@ C_c3 - C_cc - C_cd -H_ha
+dihedral_coeff   40   0.17346 2 180  0.0
+#@ C_cd - C_cc - C_c3 -H_hc
+dihedral_coeff   41   0.00000 3 0  0.0
+#@ C_cc - C_cc - C_c3 -H_hc
+dihedral_coeff   42   0.00000 3 0  0.0
+#@ C_ca - C_ca - C_c3 -H_hc
+dihedral_coeff   43   0.00000 2 0  0.0
+#@ C_c3 - C_ca - C_ca -H_ha
+dihedral_coeff   44   0.15720 2 180  0.0
+
+##############################################################################################
+#### Covalent improper dihedral parameters
+##############################################################################################
+#@  14  improper types
+
+improper_style gulp
+#@ C_cd - C_cc - C_cd - N_na
+improper_coeff    1   0.04770 -1 2
+#@ C_cc - C_cc - C_cc - N_nh
+improper_coeff    2   0.04770 -1 2
+#@ C_cd - C_cd - C_cd - N_nc
+improper_coeff    3   0.04770 -1 2
+#@ C_ca - C_ca - C_ca - N_nc
+improper_coeff    4   0.04770 -1 2
+#@ C_ca - C_ca - C_ca - N_nh
+improper_coeff    5   0.04770 -1 2
+#@ C_ca - C_ca - C_ca - N_na
+improper_coeff    6   0.04770 -1 2
+#@ N_na - C_ca - C_ca - C_cd
+improper_coeff    7   0.04770 -1 2
+#@ C_cc - C_cc - C_cd - H_ha
+improper_coeff    8   0.04770 -1 2
+#@ N_nh - C_cc - H_hn - H_hn
+improper_coeff    9   0.04770 -1 2
+#@ C_cd - C_cc - C_cd - H_ha
+improper_coeff   10   0.04770 -1 2
+#@ C_ca - C_ca - C_ca - H_ha
+improper_coeff   11   0.04770 -1 2
+#@ N_nh - C_ca - H_hn - H_hn
+improper_coeff   12   0.04770 -1 2
+#@ C_cc - C_c3 - C_cc - C_cd
+improper_coeff   13   0.04770 -1 2
+#@ C_ca - C_c3 - C_ca - C_ca
+improper_coeff   14   0.04770 -1 2
+
+##############################################################################################
+# Pair potentials
+##############################################################################################
+
+pair_style lj/cut/coul/long 10.
+pair_modify mix arithmetic
+pair_coeff  ${Li}  ${Li}    0.0146022792    1.4094017725
+pair_coeff  ${Na}  ${Na}    0.0152920938    2.1595384934
+pair_coeff  ${K}  ${K}    0.0186339092    2.8384033168
+pair_coeff  ${Rb}  ${Rb}    0.0193016426    3.0949821477
+pair_coeff  ${Cs}  ${Cs}    0.0038965716    3.6010126197
+pair_coeff  ${F}  ${F}    0.0003209181    4.0215168148
+pair_coeff  ${Cl}  ${Cl}    0.0005544136    4.8304528511
+pair_coeff  ${Br}  ${Br}    0.0011690430    4.9017247486
+pair_coeff  ${I}  ${I}    0.0018553234    5.2010667179
+pair_coeff  ${C_cd}  ${C_cd}    0.0037293369    3.3996695094
+pair_coeff  ${C_cc}  ${C_cc}    0.0037293369    3.3996695094
+pair_coeff  ${H_ha}  ${H_ha}    0.0006504657    2.5996424603
+pair_coeff  ${N_nh}  ${N_nh}    0.0073719450    3.2499985247
+pair_coeff  ${H_hn}  ${H_hn}    0.0006808208    1.0690784621
+pair_coeff  ${N_nc}  ${N_nc}    0.0073719450    3.2499985247
+pair_coeff  ${C_ca}  ${C_ca}    0.0037293369    3.3996695094
+pair_coeff  ${N_na}  ${N_na}    0.0073719450    3.2499985247
+pair_coeff  ${C_c3}  ${C_c3}    0.0047440634    3.3996695094
+pair_coeff  ${H_hc}  ${H_hc}    0.0006808208    2.6495327885
+pair_coeff  ${O2}  ${O2}    0.0067388250    3.1657195059
+pair_coeff  ${H2}  ${H2}    0.0000000000    0.0000000000
+
+special_bonds amber

@@ -1,0 +1,4 @@
+#! FIELDS time d1 d2 theta uwall1.bias uwall2.bias
+#! SET min_theta -2
+#! SET max_theta 2
+ 1.000000 18.867242 11.793579 0.189495 0.000000 0.000000
